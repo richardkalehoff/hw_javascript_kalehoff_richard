@@ -17,3 +17,13 @@ var numba = function stringLengthChecker( string ) {
 numba( "7" );
 numba( "seventy" );
 numba( "university" );
+
+function inception( callback, value ) {
+    callback( value );
+}
+
+function functionGettingPassed( messageBeingReceived ) {
+    console.log( messageBeingReceived );
+}
+
+inception( functionGettingPassed, "LOTR is a fantastic movie." );
